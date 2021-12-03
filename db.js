@@ -27,10 +27,10 @@ const schema = {
 
 const connection = mysql.createPool({
   connectionLimit: 10,
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_DB,
+  host: process.env.host,
+  user: process.env.user,
+  password: process.env.password,
+  database: process.env.db,
 });
 
 let connectionFunctions = {
