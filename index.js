@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static("frontend/build"));
 
-app.get("/", async (req, res) => {
+app.get("/locations", async (req, res) => {
   try {
     let data = await connection.findAll(req.query);
     res.send(data);

@@ -10,7 +10,7 @@ class App extends React.Component {
 
   componentDidMount() {
     axios
-      .get("/")
+      .get("/locations")
       .then((response) => {
         // handle success
         this.setState({ locations: response.data });
