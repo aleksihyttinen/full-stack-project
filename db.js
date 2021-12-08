@@ -48,6 +48,7 @@ let connectionFunctions = {
     const validLocation = validator.validate(location, schema);
     return new Promise((resolve, reject) => {
       if (validLocation.errors.length == 0) {
+        console.log("toimii");
         connection.query(
           "INSERT INTO locations (latitude, longitude) VALUES (?, ?)",
           [location.latitude, location.longitude],
