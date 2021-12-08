@@ -10,7 +10,7 @@ class App extends React.Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:8080/locations")
+      .get("/")
       .then((response) => {
         // handle success
         this.setState({ locations: response.data });
@@ -32,7 +32,7 @@ class App extends React.Component {
         whenCreated={(map) => {
           map.on("dblclick", (e) => {
             axios
-              .post("http://localhost:8080/locations", {
+              .post("/locations", {
                 latitude: e.latlng.lat,
                 longitude: e.latlng.lng,
               })
