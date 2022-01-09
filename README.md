@@ -1,5 +1,3 @@
-REACT MAP
-
 React map is my first full-stack app. 
 This app was developed as course work for my backend studies.
 
